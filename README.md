@@ -14,3 +14,6 @@ mpiexec -n 20 python3 Main.py -f kent.txt
 
 For linux user, if you want to shut down your computer after finishing all the dection, you can use the code in line 52 and 53 in Main.py script. And adding --allow-run-as-root in the command. like:
 mpiexec --allow-run-as-root -n 20 python3 Main.py -f kent.txt
+
+## Something you need
+Chrome browser, chromedriver
