@@ -7,7 +7,9 @@ The input is a .txt file, and each line has a website domanin name, like: "https
 The output are three .csv file, "result.csv", "wrong.csv" and "noDetect.csv". "wrong.csv" records the websites that status codes are not 200 or those trigger some issues when runing the code. "noDetection.csv" records the websites that their CMS are not anyone of Opencart, Prestashop, Wordpress, Magento, Shopify and Squarespace. "result.csv"  records all the websites we need.
 
 ## Prerequisites
-Python3, Chrome browser, chromedriver
+- Python3
+- Chrome browser
+- chromedriver (http://chromedriver.chromium.org/)
 
 ## How to use
 ```
