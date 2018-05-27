@@ -25,7 +25,7 @@ mpiexec --allow-run-as-root -n 20 python3 Main.py -f kent.txt
 ```
 ## Authors
 
-* **Hongyi Lin** - *Initial work* - [Hongyi Lin](https://github.com/Hongyil1)
+* **[Hongyi Lin](https://github.com/Hongyil1)** 
 
 ## License
 
