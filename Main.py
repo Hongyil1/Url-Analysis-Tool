@@ -1,3 +1,20 @@
+"""
+
+This is an internship project in Weboptimizer Melbourne.
+It's used to analyse urls and detect the following elements:
+1. Status code
+2. CMS (Opencart, Prestashop, Wordpress, Magento, Shopify and Squarespace)
+3. Website Content Classification
+4. Can the user put advertisements on the website
+
+The input should be a .txt file with a url in each row.
+The outputs are two .csv file named result.csv and wrong.csv
+
+@ author: Hongyi Lin
+@ Last Modified: 11/07/2018
+
+"""
+
 import methods
 from mpi4py import MPI
 import time
