@@ -3,7 +3,6 @@
 The methods.py contains all the functions this project needs
 
 """
-
 import requests
 import csv
 import urllib3
@@ -13,92 +12,134 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+def get_result(url):
+    """
+    The get_result method
+    :param url:
+    :return:
+    """
 
-def test(url):
+    #Pre-process the url
+    url = pre_process(url)
 
-    filednames = ['url', 'status_code', 'CMS']
-    url = url.rstrip()
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
 
     try:
-        status_code = requests.get(url=url, headers=headers).status_code
+        # Get the status code
+        s = requests.Session()
+        r = s.get(url, headers=headers)
+        status_code = r.status_code
+        soup = BeautifulSoup(r.text, 'lxml')
+        s.close()
+
         if status_code == 200:
-            url_cms = new_cms_detct(url)
-            print(url, status_code, url_cms)
-            if url_cms != "Not Detect":
-                with open("result.csv", 'a') as csvfile:
-                    writer = csv.DictWriter(csvfile, filednames)
-                    writer.writerow({'url': url, 'status_code': status_code, 'CMS': url_cms})
-            else:
-                with open("noDetect.csv", 'a') as csvfile:
-                    writer = csv.DictWriter(csvfile, filednames)
-                    writer.writerow({'url': url, 'status_code': status_code, 'CMS': url_cms})
+
+            # Get CMS
+            url_cms = cms_detct(url)
+
+            # Get category
+            url_category = get_category(url)
+            advertise = ""
+
+            if url_cms == "WordPress":
+
+                # Advertise detection
+                advertise = has_advertise(soup)
+
+            write_target(url, status_code, url_cms, url_category, advertise)
+
+        # Record the urls which status code is not 200
         else:
-            # print(status_code)
-            with open("wrong.csv", 'a') as csvfile:
-                writer = csv.DictWriter(csvfile, filednames)
-                writer.writerow({'url': url, 'status_code': status_code})
+            write_problem(url, status_code)
+
+    # Record the error url
     except:
         print("can not go to the website: ", url)
-        # status_code = requests.get(url=url, headers=headers,verify=False).status_code
-        with open("wrong.csv", 'a') as csvfile:
-            writer = csv.DictWriter(csvfile, filednames)
-            writer.writerow({'url': url, 'status_code': "None", 'CMS': 'Wrong'})
+        write_problem(url, "wrong")
         pass
 
-def new_cms_detct(url):
-    options = Options()
-    options.add_argument('--headless')
-    options.add_argument('--disable-gpu')
-    # useragent = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
-    options.add_argument('--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36')
-    # driver = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true', '--ssl-protocol=any'])
-    # driver.set_window_size(1120, 550)
-    driver = webdriver.Chrome("./chromedriver", chrome_options=options)
-    web = "https://whatcms.org/"
-    # delet the http:// or https://
-    if url.startswith('http://'):
-        url = url[7:]
-    elif url.startswith('https://'):
-        url = url[8:]
-    # delet ending '/'
-    if url.endswith('/'):
-        url = url.strip('/')
-    search_url = web + "?s=" + url + "&"
-    driver.get(search_url)
+def cms_detct(url):
 
-    sourceCode = driver.page_source
+    web = "https://whatcms.org/"
+    search_url = web + "?s=" + url + "&"
+
+    # Use bfs
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
+    s = requests.Session()
+    r = s.get(search_url, headers=headers)
+    soup = BeautifulSoup(r.text, 'lxml')
+    s.close()
+
+    # Get the pure text
+    web_text = soup.get_text()
+    # print(web_text)
+
     detect_text = "We haven't crawled"
-    if detect_text in sourceCode:
+
+    # The url has not been detected before, use selenium to click the button
+    if detect_text in web_text:
+        # print("No detected")
+        options = Options()
+        options.add_argument('--headless')
+        options.add_argument('--disable-gpu')
+        options.add_argument(
+            '--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36')
+        driver = webdriver.Chrome("./chromedriver", chrome_options=options)
+
+        try:
+            driver.get(search_url)
+        except:
+            driver.close()
+            driver.quit()
+            return False
+
         button = driver.find_element_by_class_name("btn-success")
         button.click()
-        time.sleep(3)
+        time.sleep(2)
+        result = driver.find_elements_by_class_name("nowrap")
+        elem_list = []
+        for elem in result:
+            elem_list.append(elem.text)
+        driver.close()
+        driver.quit()
 
-    result = driver.find_elements_by_class_name("nowrap")
-    elem_list = []
+        if "Magento" in elem_list:
+            return "Magento"
+        elif "WordPress" in elem_list:
+            return "WordPress"
+        elif "PrestaShop" in elem_list:
+            return "PrestaShop"
+        elif "OpenCart" in elem_list:
+            return "OpenCart"
+        elif "Shopify" in elem_list:
+            return "Shopify"
+        elif "Squarespace" in elem_list:
+            return "Squarespace"
+        else:
+            return "Not Detect"
 
-    for elem in result:
-        elem_list.append(elem.text)
-
-    # print("elem_list: ", elem_list)
-
-    driver.close()
-    driver.quit()
-
-    if "Magento" in elem_list:
-        return "Magento"
-    elif "WordPress" in elem_list:
-        return "WordPress"
-    elif "PrestaShop" in elem_list:
-        return "PrestaShop"
-    elif "OpenCart" in elem_list:
-        return "OpenCart"
-    elif "Shopify" in elem_list:
-        return "Shopify"
-    elif "Squarespace" in elem_list:
-        return "Squarespace"
+    # The url has been detected before
     else:
-        return "Not Detect"
+        if soup.find("div", {"class": "large text-center"}):
+            target_div = soup.find("div", {"class": "large text-center"})
+            result = target_div.a.get_text()
+            # print("result: ", result)
+
+            if "Magento" == result:
+                return "Magento"
+            elif "WordPress" == result:
+                return "WordPress"
+            elif "PrestaShop" == result:
+                return "PrestaShop"
+            elif "OpenCart" == result:
+                return "OpenCart"
+            elif "Shopify" == result:
+                return "Shopify"
+            elif "Squarespace" == result:
+                return "Squarespace"
+            else:
+                return "Not Detect"
 
 # the input should move the http://
 def get_category(url):
@@ -115,3 +156,50 @@ def get_category(url):
             return category
         else:
             return "Not Detection"
+
+# To detect whether a website can put advertisement
+def has_advertise(soup):
+
+    for script in soup(["script", "style"]):
+        script.decompose()
+
+    # Get the pure text
+    web_text = soup.get_text()
+
+    # Target words
+    target_word = ["advertise", "media kit", "advertising", "promote with us", "advertise with us",
+                   "press kit", "press room", "press inquiries", "advertising inquiries"]
+
+    # break into lines and remove leading and trailing space on each, lowercase
+    lines = [line.strip().lower() for line in web_text.splitlines() if 9 <= len(line.strip()) <= 21]
+
+    if len(set(lines) & set(target_word)) > 0:
+        return True
+    else:
+        return False
+
+# Remove the http:// part from the url
+def pre_process(url):
+    # delet the http:// or https://
+    if url.startswith('http://'):
+        url = url[7:]
+    elif url.startswith('https://'):
+        url = url[8:]
+    # delet ending '/'
+    if url.endswith('/'):
+        url = url.strip('/')
+
+    return url
+
+def write_target(url, status_code, url_cms, url_category, advertise):
+    filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
+    with open("target.csv", 'a') as csvfile:
+        writer = csv.DictWriter(csvfile, filednames)
+        writer.writerow({'url': url, 'status_code': status_code, 'CMS': url_cms,
+                         'category': url_category, 'advertise': advertise})
+
+def write_problem(url, status_code):
+    filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
+    with open("wrong.csv", 'a') as csvfile:
+        writer = csv.DictWriter(csvfile, filednames)
+        writer.writerow({'url': url, 'status_code': status_code})

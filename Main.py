@@ -5,10 +5,10 @@ It's used to analyse urls and detect the following elements:
 1. Status code
 2. CMS (Opencart, Prestashop, Wordpress, Magento, Shopify and Squarespace)
 3. Website Content category
-4. Can the user put advertisements on the website
+4. Can the user put advertisements on the website (Wordpress only)
 
 The input should be a .txt file with a url in each row.
-The outputs are two .csv file named result.csv and wrong.csv
+The outputs are two .csv file named target.csv and problem.csv
 
 @ author: Hongyi Lin
 @ Last Modified: 11/07/2018
@@ -30,10 +30,10 @@ size = comm.size
 
 # initial the csv file
 filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
-with open("result.csv", 'w') as csvfile:
+with open("target.csv", 'w') as csvfile:
     writer = csv.DictWriter(csvfile, filednames)
     writer.writeheader()
-with open("wrong.csv", 'w') as csvfile:
+with open("problem.csv", 'w') as csvfile:
     writer = csv.DictWriter(csvfile, filednames)
     writer.writeheader()
 # with open("noDetect.csv", 'w') as csvfile:
@@ -55,7 +55,7 @@ if __name__=="__main__":
                 if i % size == rank:
                     if len(line) > 0:
                         url = line
-                        methods.test(url)
+                        methods.get_result(url)
 
         print("**************** Rank:%d Finish ****************" % rank)
 
@@ -78,7 +78,7 @@ if __name__=="__main__":
                     if j % size == rank:
                         if len(line) > 0:
                             url = line
-                            methods.test(url)
+                            methods.get_result(url)
             # Send finish signal to rank 0
             comm.send(1, dest=0)
             print("**************** Rank:%d Finish ****************" % rank)
