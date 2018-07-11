@@ -14,9 +14,10 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def get_result(url):
     """
-    The get_result method
-    :param url:
-    :return:
+    The get_result method integrate the result from other method
+    and write the result to the file
+    :param url: input comes from Main.py, example: https://www.shore-lines.co.uk/
+    :return: No return, write the result to the file
     """
 
     #Pre-process the url
@@ -59,6 +60,12 @@ def get_result(url):
         pass
 
 def cms_detct(url):
+    """
+    This method detect the cms of the url
+    :param url: the pre-process url, a String. example: www.shore-lines.co.uk
+    :return: A string, One of the following: "Magento", "WordPress", "PrestaShop"
+    "OpenCart", "Shopify", "Squarespace" and "Not Detect".
+    """
 
     web = "https://whatcms.org/"
     search_url = web + "?s=" + url + "&"
@@ -141,8 +148,12 @@ def cms_detct(url):
             else:
                 return "Not Detect"
 
-# the input should move the http://
 def get_category(url):
+    """
+    This method category the url. The detail category can be found here: https://fortiguard.com/webfilter/categories
+    :param url: A pre-processed url, a Sting. example: www.shore-lines.co.uk
+    :return: A String.
+    """
 
     web = "https://fortiguard.com/webfilter?q="
     search_url = web + url
@@ -157,8 +168,12 @@ def get_category(url):
         else:
             return "Not Detection"
 
-# To detect whether a website can put advertisement
 def has_advertise(soup):
+    """
+    This method is used to judge whether a WorldPress website can advertise.
+    :param soup: The soup of this website. soup comes from BeautifulSoup(r.text, 'lxml').
+    :return: A String. "True" or "False".
+    """
 
     for script in soup(["script", "style"]):
         script.decompose()
@@ -174,12 +189,17 @@ def has_advertise(soup):
     lines = [line.strip().lower() for line in web_text.splitlines() if 9 <= len(line.strip()) <= 21]
 
     if len(set(lines) & set(target_word)) > 0:
-        return True
+        return "True"
     else:
-        return False
+        return "False"
 
 # Remove the http:// part from the url
 def pre_process(url):
+    """
+    This method is used to remove the http and / from the url.
+    :param url: The original url read from file. A String. like: https://www.shore-lines.co.uk/
+    :return: The processed url. A String. Example: www.shore-lines.co.uk
+    """
     # delet the http:// or https://
     if url.startswith('http://'):
         url = url[7:]
@@ -188,10 +208,18 @@ def pre_process(url):
     # delet ending '/'
     if url.endswith('/'):
         url = url.strip('/')
-
     return url
 
 def write_target(url, status_code, url_cms, url_category, advertise):
+    """
+    Write the result to target.csv file.
+    :param url: The processed url. A String. like: www.shore-lines.co.uk
+    :param status_code: The status_code. An int. Like: 200
+    :param url_cms: cms of the url. A String. Like: OpenCart
+    :param url_category: A String. Like: Shopping
+    :param advertise: A String. Like: ""
+    :return: No return. Write result to target.csv file.
+    """
     filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
     with open("target.csv", 'a') as csvfile:
         writer = csv.DictWriter(csvfile, filednames)
@@ -199,6 +227,12 @@ def write_target(url, status_code, url_cms, url_category, advertise):
                          'category': url_category, 'advertise': advertise})
 
 def write_problem(url, status_code):
+    """
+    Write result to problem.csv file.
+    :param url: The processed url. A String. like: www.shore-lines.co.uk
+    :param status_code: The status_code. An int. Like: 404
+    :return: No return. Write result to problem.csv file.
+    """
     filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
     with open("wrong.csv", 'a') as csvfile:
         writer = csv.DictWriter(csvfile, filednames)
