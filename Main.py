@@ -20,7 +20,6 @@ from mpi4py import MPI
 import time
 import argparse
 import csv
-import os
 
 start_time = time.time()
 comm = MPI.COMM_WORLD

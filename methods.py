@@ -2,6 +2,9 @@
 
 The methods.py contains all the functions this project needs
 
+@ author: Hongyi Lin
+@ Last Modified: 11/07/2018
+
 """
 import requests
 import csv
