@@ -85,7 +85,7 @@ def cms_detct(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
     s = requests.Session()
-    r = s.get(search_url, headers=headers, timeout=20)
+    r = s.get(search_url, headers=headers, timeout=60)
     soup = BeautifulSoup(r.text, 'lxml')
     s.close()
 
