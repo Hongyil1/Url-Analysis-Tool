@@ -1,6 +1,6 @@
 """
 
-
+The methods.py contains all the functions this project needs
 
 """
 
@@ -8,6 +8,7 @@ import requests
 import csv
 import urllib3
 import time
+from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
@@ -98,3 +99,19 @@ def new_cms_detct(url):
         return "Squarespace"
     else:
         return "Not Detect"
+
+# the input should move the http://
+def get_category(url):
+
+    web = "https://fortiguard.com/webfilter?q="
+    search_url = web + url
+    r = requests.get(search_url)
+    soup = BeautifulSoup(r.content, "lxml")
+    result = soup.find_all(class_="info_title")
+
+    for elem in result:
+        if "Category:" in elem.text:
+            category = elem.text[10:]
+            return category
+        else:
+            return "Not Detection"

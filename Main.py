@@ -4,7 +4,7 @@ This is an internship project in Weboptimizer Melbourne.
 It's used to analyse urls and detect the following elements:
 1. Status code
 2. CMS (Opencart, Prestashop, Wordpress, Magento, Shopify and Squarespace)
-3. Website Content Classification
+3. Website Content category
 4. Can the user put advertisements on the website
 
 The input should be a .txt file with a url in each row.
@@ -29,16 +29,16 @@ rank = comm.rank
 size = comm.size
 
 # initial the csv file
-filednames = ['url', 'status_code', 'CMS']
+filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
 with open("result.csv", 'w') as csvfile:
     writer = csv.DictWriter(csvfile, filednames)
     writer.writeheader()
 with open("wrong.csv", 'w') as csvfile:
     writer = csv.DictWriter(csvfile, filednames)
     writer.writeheader()
-with open("noDetect.csv", 'w') as csvfile:
-    writer = csv.DictWriter(csvfile, filednames)
-    writer.writeheader()
+# with open("noDetect.csv", 'w') as csvfile:
+#     writer = csv.DictWriter(csvfile, filednames)
+#     writer.writeheader()
 
 
 if __name__=="__main__":
@@ -48,9 +48,10 @@ if __name__=="__main__":
 
     input_file = results.file
 
+    # rank 0 as the master
     if rank == 0:
         with open(input_file) as f:
-            for i , line in enumerate(f):
+            for i, line in enumerate(f):
                 if i % size == rank:
                     if len(line) > 0:
                         url = line
@@ -68,7 +69,6 @@ if __name__=="__main__":
             print("**************** ALL Finish ****************")
             # shutdown computer when finished
             # os.system('sudo shutdown now -h')
-
 
 
     for i in range(1, size):
