@@ -1,0 +1,45 @@
+url,status_code,CMS,category,advertise
+http://www.news.com.au/,200,WordPress,News and Media,False
+http://www.lifehacker.com.au/,200,WordPress,Information Technology,True
+http://www.businessinsider.com.au/,200,WordPress,Business,True
+http://www.kotaku.com.au/,200,WordPress,Games,True
+http://www.finder.com.au/,200,WordPress,Finance and Banking,False
+http://www.mamamia.com.au/,200,WordPress,Entertainment,True
+http://www.gizmodo.com.au/,200,WordPress,,True
+http://www.crikey.com.au/,200,WordPress,News and Media,True
+http://www.caradvice.com.au/,200,WordPress,Personal Vehicles,True
+http://www.kathmandu.com.au/,200,Magento,Business,
+http://www.flyingsolo.com.au/,200,WordPress,Business,True
+http://www.dejanseo.com.au/,200,WordPress,Information Technology,False
+http://www.eway.com.au/,200,WordPress,Information Technology,False
+http://www.mercury.com.au/,200,WordPress,Job Search,False
+http://www.culturekings.com.au/,200,Shopify,Business,
+http://www.digitalpacific.com.au/,200,WordPress,Web Hosting,False
+http://www.harveynorman.com.au/,200,Magento,Shopping,
+http://www.styletread.com.au/,200,Magento,Shopping,
+http://www.tigermist.com.au/,200,Shopify,Shopping,
+http://www.adorebeauty.com.au/,200,Magento,Shopping,
+http://www.beaconlighting.com.au/,200,Magento,Shopping,
+http://www.pointhacks.com.au/,200,WordPress,Travel,False
+http://www.canstar.com.au/,200,WordPress,Finance and Banking,True
+http://www.barryplant.com.au/,200,WordPress,Real Estate,False
+http://www.petbarn.com.au/,200,Magento,Shopping,
+http://www.streetfx.com.au/,200,Not Detect,Personal Vehicles,
+http://www.publicholidays.com.au/,200,WordPress,Travel,False
+http://www.tvtonight.com.au/,200,WordPress,Entertainment,False
+http://www.securepay.com.au/,200,WordPress,,False
+http://www.appen.com.au/,200,Not Detect,Business,
+http://www.mydesktop.com.au/,200,WordPress,Real Estate,False
+http://www.dailyreckoning.com.au/,200,WordPress,Brokerage and Trading,False
+http://www.dnamagazine.com.au/,200,WordPress,Other Adult Materials,False
+http://www.livingstyles.com.au/,200,Magento,Shopping,
+http://www.anchor.com.au/,200,WordPress,Information Technology,False
+http://www.mathletics.com.au/,200,Not Detect,Education,
+http://www.sportsgirl.com.au/,200,Magento,Shopping,
+http://www.babybunting.com.au/,200,Magento,Shopping,
+http://www.bulknutrients.com.au/,200,WordPress,Shopping,False
+http://www.skymesh.net.au/,200,Not Detect,Business,
+http://www.4wdaction.com.au/,200,Not Detect,Personal Vehicles,
+http://www.quiksilver.com.au/,200,Not Detect,Business,
+http://www.mcnews.com.au/,200,Not Detect,Sports,
+http://www.iga.com.au/,200,Not Detect,,
