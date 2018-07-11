@@ -29,10 +29,10 @@ size = comm.size
 
 # initial the csv file
 filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
-with open("target.csv", 'w') as csvfile:
+with open("target.csv", 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, filednames)
     writer.writeheader()
-with open("problem.csv", 'w') as csvfile:
+with open("problem.csv", 'w', newline='') as csvfile:
     writer = csv.DictWriter(csvfile, filednames)
     writer.writeheader()
 

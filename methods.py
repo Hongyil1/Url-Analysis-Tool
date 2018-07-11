@@ -85,7 +85,7 @@ def cms_detct(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
     s = requests.Session()
-    r = s.get(search_url, headers=headers)
+    r = s.get(search_url, headers=headers, timeout=20)
     soup = BeautifulSoup(r.text, 'lxml')
     s.close()
 
@@ -234,7 +234,7 @@ def write_target(url, status_code, url_cms, url_category, advertise):
     :return: No return. Write result to target.csv file.
     """
     filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
-    with open("target.csv", 'a') as csvfile:
+    with open("target.csv", 'a', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, filednames)
         writer.writerow({'url': url, 'status_code': status_code, 'CMS': url_cms,
                          'category': url_category, 'advertise': advertise})
@@ -247,7 +247,7 @@ def write_problem(url, status_code):
     :return: No return. Write result to problem.csv file.
     """
     filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
-    with open("problem.csv", 'a') as csvfile:
+    with open("problem.csv", 'a', newline='') as csvfile:
         writer = csv.DictWriter(csvfile, filednames)
         writer.writerow({'url': url, 'status_code': status_code, 'CMS': "",
                          'category': "", 'advertise': ""})
