@@ -23,8 +23,9 @@ def get_result(url):
     :return: No return, write the result to the file
     """
 
-    #Pre-process the url
-    url = pre_process(url)
+    if url.endswith('\n'):
+        url = url.strip('\n')
+    origin_url = url
 
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
 
@@ -36,10 +37,16 @@ def get_result(url):
         soup = BeautifulSoup(r.text, 'lxml')
         s.close()
 
+        # print("status_code: ", status_code)
+
         if status_code == 200:
+
+            # Pre-process the url
+            url = pre_process(url)
 
             # Get CMS
             url_cms = cms_detct(url)
+            # print("cms: ", url_cms)
 
             # Get category
             url_category = get_category(url)
@@ -50,16 +57,17 @@ def get_result(url):
                 # Advertise detection
                 advertise = has_advertise(soup)
 
-            write_target(url, status_code, url_cms, url_category, advertise)
+            print(origin_url, status_code, url_cms, url_category, advertise, flush=True)
+            write_target(origin_url, status_code, url_cms, url_category, advertise)
 
         # Record the urls which status code is not 200
         else:
-            write_problem(url, status_code)
+            write_problem(origin_url, status_code)
 
     # Record the error url
-    except:
+    except Exception as e:
         print("can not go to the website: ", url)
-        write_problem(url, "wrong")
+        write_problem(origin_url, "wrong")
         pass
 
 def cms_detct(url):
@@ -150,6 +158,8 @@ def cms_detct(url):
                 return "Squarespace"
             else:
                 return "Not Detect"
+        else:
+            return "Not Detect"
 
 def get_category(url):
     """
@@ -237,6 +247,7 @@ def write_problem(url, status_code):
     :return: No return. Write result to problem.csv file.
     """
     filednames = ['url', 'status_code', 'CMS', 'category', 'advertise']
-    with open("wrong.csv", 'a') as csvfile:
+    with open("problem.csv", 'a') as csvfile:
         writer = csv.DictWriter(csvfile, filednames)
-        writer.writerow({'url': url, 'status_code': status_code})
+        writer.writerow({'url': url, 'status_code': status_code, 'CMS': "",
+                         'category': "", 'advertise': ""})

@@ -35,9 +35,6 @@ with open("target.csv", 'w') as csvfile:
 with open("problem.csv", 'w') as csvfile:
     writer = csv.DictWriter(csvfile, filednames)
     writer.writeheader()
-# with open("noDetect.csv", 'w') as csvfile:
-#     writer = csv.DictWriter(csvfile, filednames)
-#     writer.writeheader()
 
 
 if __name__=="__main__":
