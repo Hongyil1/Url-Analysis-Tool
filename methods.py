@@ -10,9 +10,11 @@ import requests
 import csv
 import urllib3
 import time
+from requests import adapters
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+requests.adapters.DEFAULT_RETRIES = 5
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 def get_result(url):
@@ -32,7 +34,9 @@ def get_result(url):
     try:
         # Get the status code
         s = requests.Session()
-        r = s.get(url, headers=headers)
+        s.keep_alive = False
+
+        r = s.get(url, headers=headers, timeout=30)
         status_code = r.status_code
         soup = BeautifulSoup(r.text, 'lxml')
         s.close()
@@ -45,11 +49,13 @@ def get_result(url):
             url = pre_process(url)
 
             # Get CMS
-            url_cms = cms_detct(url)
+            # url_cms = cms_detct(url)
+            url_cms = ""
             # print("cms: ", url_cms)
 
             # Get category
             url_category = get_category(url)
+            # url_category = ""
             advertise = ""
 
             if url_cms == "WordPress":
@@ -68,6 +74,7 @@ def get_result(url):
     except Exception as e:
         print("can not go to the website: ", url)
         write_problem(origin_url, "wrong")
+        print(str(e))
         pass
 
 def cms_detct(url):
@@ -85,7 +92,8 @@ def cms_detct(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
     s = requests.Session()
-    r = s.get(search_url, headers=headers, timeout=60)
+    s.keep_alive = False
+    r = s.get(search_url, headers=headers)
     soup = BeautifulSoup(r.text, 'lxml')
     s.close()
 
@@ -170,8 +178,15 @@ def get_category(url):
 
     web = "https://fortiguard.com/webfilter?q="
     search_url = web + url
-    r = requests.get(search_url)
-    soup = BeautifulSoup(r.content, "lxml")
+
+    # Use bfs
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
+    s = requests.Session()
+    s.keep_alive = False
+    r = s.get(search_url, headers=headers, timeout=30)
+    soup = BeautifulSoup(r.text, 'lxml')
+    s.close()
     result = soup.find_all(class_="info_title")
 
     for elem in result:
@@ -251,3 +266,25 @@ def write_problem(url, status_code):
         writer = csv.DictWriter(csvfile, filednames)
         writer.writerow({'url': url, 'status_code': status_code, 'CMS': "",
                          'category': "", 'advertise': ""})
+# Return a list of 300 proxy, e.g. ['36.67.227.195:8080', '74.116.59.8:53281']
+def get_proxy_list():
+    url = "https://free-proxy-list.net/"
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
+    s = requests.Session()
+    r = s.get(url, headers=headers)
+    soup = BeautifulSoup(r.text, "lxml")
+    s.close()
+
+    # print(soup)
+    proxy_list = []
+
+    tag_tbody = soup.find("tbody")
+    tag_trs = tag_tbody.find_all("tr")
+    for tr in tag_trs:
+        tag_tds = tr.find_all("td")
+        proxy = tag_tds[0].text + ":" + tag_tds[1].text
+        proxy_list.append(proxy)
+    # print(len(proxy_list))
+    # print(proxy_list)
+    return proxy_list
