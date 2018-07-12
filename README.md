@@ -14,7 +14,7 @@ The output are three .csv file, "result.csv", "wrong.csv" and "noDetect.csv". "w
 
 ## How to use
 ```
-mpiexec -n 20 python3 Main.py -f input.txt
+mpiexec -n number_of_process python3 Main.py -f your_input_file
 ```
 -n is the number of processors you want to use<br>
 -f is the file you want to process.<br>
