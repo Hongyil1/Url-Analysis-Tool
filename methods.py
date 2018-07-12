@@ -3,7 +3,7 @@
 The methods.py contains all the functions this project needs
 
 @ author: Hongyi Lin
-@ Last Modified: 11/07/2018
+@ Last Modified: 12/07/2018
 
 """
 import requests
@@ -282,8 +282,12 @@ def write_problem(url, status_code):
         writer = csv.DictWriter(csvfile, filednames)
         writer.writerow({'url': url, 'status_code': status_code, 'CMS': "",
                          'category': "", 'advertise': ""})
-# Return a list of 300 proxy, e.g. ['36.67.227.195:8080', '74.116.59.8:53281']
+
 def get_proxy_list():
+    """
+    This function scrapes free proxy from https://free-proxy-list.net/
+    :return: A list of proxy, length is 30. e.g. ['36.67.227.195:8080', '74.116.59.8:53281']
+    """
     url = "https://free-proxy-list.net/"
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
@@ -292,7 +296,6 @@ def get_proxy_list():
     soup = BeautifulSoup(r.text, "lxml")
     s.close()
 
-    # print(soup)
     proxy_list = []
 
     tag_tbody = soup.find("tbody")

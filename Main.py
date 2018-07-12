@@ -11,7 +11,7 @@ The input should be a .txt file with a url in each row.
 The outputs are two .csv file named target.csv and problem.csv
 
 @ author: Hongyi Lin
-@ Last Modified: 11/07/2018
+@ Last Modified: 12/07/2018
 
 """
 
@@ -54,11 +54,19 @@ if __name__=="__main__":
     # rank 0 as the master
     if rank == 0:
         with open(input_file) as f:
+            count = 0
             for i, line in enumerate(f):
                 if i % size == rank:
                     if len(line) > 0:
-                        url = line
-                        methods.get_result(url, proxy_list)
+                        # Renew the proxy_list each 100 loops
+                        if count == 100:
+                            proxy_list = methods.get_proxy_list()
+                            count = 0
+                            print("rank{0} renews the proxy list.....".format(rank))
+                        else:
+                            url = line
+                            methods.get_result(url, proxy_list)
+                            count += 1
 
         print("**************** Rank:%d Finish ****************" % rank)
 
@@ -77,11 +85,19 @@ if __name__=="__main__":
     for i in range(1, size):
         if rank == i:
             with open(input_file) as f:
+                count = 0
                 for j, line in enumerate(f):
                     if j % size == rank:
                         if len(line) > 0:
-                            url = line
-                            methods.get_result(url, proxy_list)
+                            # Renew the proxy_list each 100 loops
+                            if count == 100:
+                                proxy_list = methods.get_proxy_list()
+                                count = 0
+                                print("rank{0} renews the proxy list.....".format(rank))
+                            else:
+                                url = line
+                                methods.get_result(url, proxy_list)
+                                count += 1
             # Send finish signal to rank 0
             comm.send(1, dest=0)
             print("**************** Rank:%d Finish ****************" % rank)
