@@ -10,6 +10,7 @@ import requests
 import csv
 import urllib3
 import time
+import random
 from requests import adapters
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -17,7 +18,7 @@ from selenium.webdriver.chrome.options import Options
 requests.adapters.DEFAULT_RETRIES = 5
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-def get_result(url):
+def get_result(url, proxy_list):
     """
     The get_result method integrate the result from other method
     and write the result to the file
@@ -30,6 +31,7 @@ def get_result(url):
     origin_url = url
 
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
+
 
     try:
         # Get the status code
@@ -49,17 +51,13 @@ def get_result(url):
             url = pre_process(url)
 
             # Get CMS
-            # url_cms = cms_detct(url)
-            url_cms = ""
-            # print("cms: ", url_cms)
+            url_cms = cms_detct(url)
 
             # Get category
-            url_category = get_category(url)
-            # url_category = ""
+            url_category = get_category(url, proxy_list)
             advertise = ""
 
             if url_cms == "WordPress":
-
                 # Advertise detection
                 advertise = has_advertise(soup)
 
@@ -169,7 +167,7 @@ def cms_detct(url):
         else:
             return "Not Detect"
 
-def get_category(url):
+def get_category(url, proxy_list):
     """
     This method category the url. The detail category can be found here: https://fortiguard.com/webfilter/categories
     :param url: A pre-processed url, a Sting. example: www.shore-lines.co.uk
@@ -184,7 +182,25 @@ def get_category(url):
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
     s = requests.Session()
     s.keep_alive = False
-    r = s.get(search_url, headers=headers, timeout=30)
+
+    # Use loop to solve the connection problem
+    r = ''
+    count = 0
+    while r == '':
+        if count == 5:
+            print("Really bad url, can't work.....")
+            return "Not Detection"
+        else:
+            try:
+                proxy = random.choice(proxy_list)
+                # print('proxy:', proxy)
+                r = s.get(search_url, headers=headers, proxies={"http": proxy, "https": proxy})
+                break
+            except:
+                print("Connection refused by the server, change proxy.")
+                count += 1
+                continue
+
     soup = BeautifulSoup(r.text, 'lxml')
     s.close()
     result = soup.find_all(class_="info_title")
@@ -285,6 +301,7 @@ def get_proxy_list():
         tag_tds = tr.find_all("td")
         proxy = tag_tds[0].text + ":" + tag_tds[1].text
         proxy_list.append(proxy)
-    # print(len(proxy_list))
-    # print(proxy_list)
+
+    # leave the first 30 proxy
+    proxy_list = proxy_list[:30]
     return proxy_list
