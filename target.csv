@@ -1,1 +1,617 @@
 url,status_code,CMS,category,advertise
+http://www.priceline.com.au/,200,Magento,Shopping,
+http://www.dgmperformance.com.au/,200,WordPress,Business,False
+http://www.gizmodo.com.au/,200,WordPress,Information Technology,True
+http://www.businessinsider.com.au/,200,WordPress,Business,True
+http://www.adelaidenow.com.au/,200,Not Detection,News and Media,
+http://www.kotaku.com.au/,200,WordPress,Games,True
+http://www.mamamia.com.au/,200,WordPress,Entertainment,True
+http://www.foxsports.com.au/,200,WordPress,Sports,False
+http://www.mumbrella.com.au/,200,WordPress,News and Media,True
+http://www.finder.com.au/,200,WordPress,Finance and Banking,False
+http://www.smartcompany.com.au/,200,WordPress,News and Media,True
+http://www.bellybelly.com.au/,200,WordPress,Health and Wellness,True
+http://www.news.com.au/,200,WordPress,News and Media,False
+http://www.mercury.com.au/,200,WordPress,Job Search,False
+http://www.kathmandu.com.au/,200,Magento,Business,
+http://www.ausregistry.com.au/,200,WordPress,Information Technology,False
+http://www.barryplant.com.au/,200,WordPress,Real Estate,False
+http://www.nga.net.au/,200,Not Detection,Job Search,
+http://www.crikey.com.au/,200,WordPress,News and Media,True
+http://www.musicfeeds.com.au/,200,WordPress,Entertainment,False
+http://www.kidspot.com.au/,200,WordPress,Society and Lifestyles,False
+http://www.tennis.com.au/,200,WordPress,Sports,False
+http://www.vogue.com.au/,200,WordPress,Society and Lifestyles,True
+http://www.flyingsolo.com.au/,200,WordPress,Business,True
+http://www.harveynorman.com.au/,200,Magento,Shopping,
+http://www.binglee.com.au/,200,Magento,Shopping,
+http://www.beaconlighting.com.au/,200,Magento,Shopping,
+http://www.securepay.com.au/,200,WordPress,Finance and Banking,False
+http://www.pharmacyonline.com.au/,200,Magento,Medicine,
+http://www.culturekings.com.au/,200,Shopify,Business,
+http://www.styletread.com.au/,200,Magento,Shopping,
+http://www.dejanseo.com.au/,200,WordPress,Information Technology,False
+http://www.pointhacks.com.au/,200,WordPress,Travel,False
+http://www.streetfx.com.au/,200,Not Detection,Personal Vehicles,
+http://www.fool.com.au/,200,WordPress,Finance and Banking,False
+http://www.lifehacker.com.au/,200,WordPress,Information Technology,True
+http://www.bodyandsoul.com.au/,200,WordPress,Health and Wellness,False
+http://www.palacecinemas.com.au/,200,WordPress,Entertainment,False
+http://www.publicholidays.com.au/,200,WordPress,Travel,False
+http://www.dnamagazine.com.au/,200,WordPress,Other Adult Materials,False
+http://www.ozlighting.com.au/,200,Magento,Shopping,
+http://www.insideretail.com.au/,200,WordPress,Business,False
+http://www.1688.com.au/,200,WordPress,News and Media,False
+http://www.themercury.com.au/,200,Not Detection,News and Media,
+http://www.petbarn.com.au/,200,Magento,Shopping,
+http://www.motoring.com.au/,200,WordPress,Personal Vehicles,False
+http://www.gadgetguy.com.au/,200,WordPress,Information Technology,False
+http://www.ntnews.com.au/,200,Not Detection,News and Media,
+http://www.bonds.com.au/,200,Magento,Business,
+http://www.dwidigitalcameras.com.au/,200,Magento,Information Technology,
+http://www.dailytelegraph.com.au/,200,WordPress,News and Media,True
+http://www.digitalpacific.com.au/,200,WordPress,Web Hosting,False
+http://www.theroar.com.au/,200,WordPress,Sports,True
+http://www.mcnews.com.au/,200,WordPress,Sports,False
+http://www.physioadvisor.com.au/,200,WordPress,Health and Wellness,True
+http://www.godfreys.com.au/,200,Magento,Business,
+http://www.forevernew.com.au/,200,Magento,Shopping,
+http://www.tvtonight.com.au/,200,WordPress,Entertainment,False
+http://www.anchor.com.au/,200,WordPress,Information Technology,False
+http://www.losebabyweight.com.au/,200,WordPress,Health and Wellness,False
+http://www.heraldsun.com.au/,200,WordPress,News and Media,True
+http://www.stayathomemum.com.au/,200,WordPress,Business,False
+http://www.zanui.com.au/,200,WordPress,Shopping,False
+http://www.autobarn.com.au/,200,Magento,Personal Vehicles,
+http://www.thewhoot.com.au/,200,Not Detection,Not Detection,
+http://www.beginningboutique.com.au/,200,Shopify,Shopping,
+http://www.mydesktop.com.au/,200,WordPress,Real Estate,False
+http://www.mygc.com.au/,200,WordPress,News and Media,True
+http://www.vision6.com.au/,200,WordPress,Business,False
+http://www.mathletics.com.au/,200,Not Detection,Education,
+http://www.gluestore.com.au/,200,Magento,Shopping,
+http://www.apiainternational.com.au/,200,Not Detection,Sports,
+http://www.arb.com.au/,200,WordPress,Business,False
+http://www.muraboutique.com.au/,200,Shopify,Shopping,
+http://www.goget.com.au/,200,WordPress,Business,False
+http://www.cairnspost.com.au/,200,WordPress,News and Media,True
+http://www.bandt.com.au/,200,WordPress,News and Media,True
+http://www.platypusshoes.com.au/,200,Magento,Shopping,
+http://www.camerahouse.com.au/,200,Magento,Shopping,
+http://www.transdirect.com.au/,200,WordPress,Business,False
+http://www.skymesh.net.au/,200,WordPress,Business,False
+http://www.caradvice.com.au/,200,WordPress,Personal Vehicles,True
+http://www.teds.com.au/,200,Magento,Information Technology,
+http://www.geelongadvertiser.com.au/,200,WordPress,News and Media,True
+http://www.tigermist.com.au/,200,Shopify,Shopping,
+http://www.bicycles.net.au/,200,WordPress,Sports,False
+http://www.camerasky.com.au/,200,Magento,Information Technology,
+http://www.bulknutrients.com.au/,200,WordPress,Shopping,False
+http://www.baby-direct.com.au/,200,Magento,Shopping,
+http://www.omnivore.com.au/,200,WordPress,Web-based Email,False
+http://www.appen.com.au/,200,Not Detection,Business,
+http://www.portphillippublishing.com.au/,200,WordPress,Business,False
+http://www.betta.com.au/,200,Magento,Business,
+http://www.binaryoptions.net.au/,200,Not Detection,Information Technology,
+http://www.titandigital.com.au/,200,WordPress,Information Technology,False
+http://www.coop.com.au/,200,Magento,Not Detection,
+http://www.roi.com.au/,200,WordPress,Business,False
+http://www.energymatters.com.au/,200,WordPress,Business,False
+http://www.totaltools.com.au/,200,Magento,Business,
+http://www.babybunting.com.au/,200,Magento,Shopping,
+http://www.kookai.com.au/,200,Shopify,Shopping,
+http://www.sportsgirl.com.au/,200,Magento,Shopping,
+http://www.statusanxiety.com.au/,200,Shopify,Shopping,
+http://www.quiksilver.com.au/,200,Magento,Business,
+http://www.bluewiremedia.com.au/,200,WordPress,Information Technology,False
+http://www.connective.com.au/,200,WordPress,Finance and Banking,False
+http://www.delimiter.com.au/,200,WordPress,Information Technology,False
+http://www.probonoaustralia.com.au/,200,WordPress,General Organizations,True
+http://www.theathletesfoot.com.au/,200,Magento,Shopping,
+http://www.4cabling.com.au/,200,Magento,Information Technology,
+http://www.techly.com.au/,200,WordPress,Business,True
+http://www.totalfloorsandingandpolishing.com.au/,200,WordPress,Business,False
+http://www.buggybuddys.com.au/,200,WordPress,Entertainment,True
+http://www.adorebeauty.com.au/,200,Magento,Shopping,
+http://www.carpetcourt.com.au/,200,Magento,Business,
+http://www.jaxtyres.com.au/,200,Magento,Personal Vehicles,
+http://www.propertyupdate.com.au/,200,Not Detection,Finance and Banking,
+http://www.anytimefitness.com.au/,200,Not Detection,Health and Wellness,
+http://www.hippoblue.com.au/,200,Not Detection,Education,
+http://www.dollboxx.com.au/,200,Not Detection,Shopping,
+http://www.chibebe.com.au/,200,Not Detection,Shopping,
+http://www.mahiya.com.au/,200,Not Detection,Shopping,
+http://www.thehorse.com.au/,200,Not Detection,Society and Lifestyles,
+http://www.macfixit.com.au/,200,Not Detection,Information Technology,
+http://www.australianfrequentflyer.com.au/,200,Not Detection,Travel,
+http://www.stuckonyou.com.au/,200,Not Detection,Shopping,
+http://www.v8supercars.com.au/,200,Not Detection,Sports,
+http://www.suppsrus.com.au/,200,Not Detection,Health and Wellness,
+http://www.pajeroclub.com.au/,200,Not Detection,Sports,
+http://www.replas.com.au/,200,Not Detection,Business,
+http://www.aminoz.com.au/,200,Not Detection,Not Detection,
+http://www.colettehayman.com.au/,200,Not Detection,Shopping,
+http://www.bedbathntable.com.au/,200,Not Detection,Business,
+http://www.mattblatt.com.au/,200,Not Detection,Shopping,
+http://www.mitre10.com.au/,200,Not Detection,Business,
+http://www.ctrlf5webservices.com.au/,200,Not Detection,Information Technology,
+http://www.jackmedia.com.au/,200,Not Detection,Business,
+http://www.kingliving.com.au/,200,Not Detection,Shopping,
+http://www.eway.com.au/,200,WordPress,Information Technology,False
+http://www.legalvision.com.au/,200,Not Detection,Business,
+http://www.superguide.com.au/,200,Not Detection,Finance and Banking,
+http://www.dxracer.com.au/,200,Not Detection,Shopping,
+http://www.klika.com.au/,200,Not Detection,Shopping,
+http://www.lebara.com.au/,200,Not Detection,Information Technology,
+http://www.dailyreckoning.com.au/,200,Not Detection,Brokerage and Trading,
+http://www.inspireeducation.net.au/,200,Not Detection,Education,
+http://www.brisbanekids.com.au/,200,Not Detection,General Organizations,
+http://www.barbequesgalore.com.au/,200,Not Detection,Shopping,
+http://www.theweekendedition.com.au/,200,Not Detection,News and Media,
+http://www.hushpuppies.com.au/,200,Not Detection,Business,
+http://www.middleagedmama.com.au/,200,Not Detection,Personal Websites and Blogs,
+http://www.converga.com.au/,200,Not Detection,Business,
+http://www.beserk.com.au/,200,Not Detection,Shopping,
+http://www.oceanhomeloans.com.au/,200,Not Detection,Finance and Banking,
+http://www.canstar.com.au/,200,Not Detection,Finance and Banking,
+http://www.craftonline.com.au/,200,Not Detection,Shopping,
+http://www.macrobusiness.com.au/,200,Not Detection,Business,
+http://www.harrisfarm.com.au/,200,Not Detection,Business,
+http://www.comparetv.com.au/,200,Not Detection,Entertainment,
+http://www.seocopilot.com.au/,200,Not Detection,Business,
+http://www.tafecourses.com.au/,200,Not Detection,Business,
+http://www.mybusinesscentral.com.au/,200,Not Detection,Business,
+http://www.roxcii.com.au/,200,Not Detection,Business,
+http://www.breville.com.au/,200,Not Detection,Business,
+http://www.eldersrealestate.com.au/,200,Not Detection,Real Estate,
+http://www.4wdaction.com.au/,200,Not Detection,Personal Vehicles,
+http://www.jw.com.au/,200,Not Detection,Information Technology,
+http://www.tinyme.com.au/,200,Not Detection,Shopping,
+http://www.cirrusmedia.com.au/,200,Not Detection,Information Technology,
+http://www.boostjuice.com.au/,200,Not Detection,Business,
+http://www.gomarkets.com.au/,200,Not Detection,News and Media,
+http://www.dtbaker.com.au/,200,Not Detection,Information Technology,
+http://www.factoryfast.com.au/,200,Not Detection,Shopping,
+http://www.revengesales.com.au/,200,Not Detection,Shopping,
+http://www.vanguardworld.com.au/,200,Not Detection,Business,
+http://www.wittner.com.au/,200,Not Detection,Shopping,
+http://www.radiotoday.com.au/,200,Not Detection,News and Media,
+http://www.antheacrawford.com.au/,200,Not Detection,Society and Lifestyles,
+http://www.excelphysio.com.au/,200,Not Detection,Health and Wellness,
+http://www.joycemayne.com.au/,200,Not Detection,Business,
+http://www.racingjobs.com.au/,200,Not Detection,Job Search,
+http://www.dresshop.com.au/,200,Not Detection,Shopping,
+http://www.gdayjapan.com.au/,200,Not Detection,Travel,
+http://www.dtechdrivertraining.com.au/,200,Not Detection,Education,
+http://www.kymodo.com.au/,200,Not Detection,Business,
+http://www.gassani.com.au/,200,Not Detection,Business,
+http://www.dreamtimeresorts.com.au/,200,Not Detection,Travel,
+http://www.gormanshop.com.au/,200,Not Detection,Shopping,
+http://www.livingstyles.com.au/,200,Not Detection,Shopping,
+http://www.clubtroppo.com.au/,200,Not Detection,Personal Websites and Blogs,
+http://www.turmericlife.com.au/,200,Not Detection,Entertainment,
+http://www.therefinedgeek.com.au/,200,Not Detection,Personal Websites and Blogs,
+http://www.annestreetpartners.com.au/,200,Not Detection,Business,
+http://www.visser.com.au/,200,Not Detection,Information Technology,
+http://www.efashion.net.au/,200,Not Detection,Not Detection,
+http://www.aussiebroadband.com.au/,200,Not Detection,Information Technology,
+http://www.everydayhero.com.au/,200,Not Detection,General Organizations,
+http://www.adcentre.com.au/,200,Not Detection,Reference,
+http://www.vidaxl.com.au/,200,Not Detection,Information Technology,
+http://www.tarocash.com.au/,200,Not Detection,Shopping,
+http://www.iga.com.au/,200,Not Detection,Business,
+http://www.tonybianco.com.au/,200,Not Detection,Business,
+http://www.cancercouncil.com.au/,200,Not Detection,Health and Wellness,
+http://www.biante.com.au/,200,Not Detection,Shopping,
+http://www.babykingdom.com.au/,200,Not Detection,Shopping,
+http://www.doncasterhilldental.com.au/,200,Not Detection,Health and Wellness,
+http://www.xeniaboutique.com.au/,200,Not Detection,Shopping,
+http://www.goldentyreaustralia.com.au/,200,Not Detection,Business,
+http://www.suitmeup.com.au/,200,Not Detection,Business,
+http://www.popcherry.com.au/,200,Not Detection,Shopping,
+http://www.clarks.com.au/,200,Not Detection,Business,
+http://www.awol.com.au/,200,Not Detection,Travel,
+http://www.spelldesigns.com.au/,200,Not Detection,Shopping,
+http://www.hottoner.com.au/,200,Not Detection,Shopping,
+http://www.lawpath.com.au/,200,Not Detection,Business,
+http://www.twobluebirdies.com.au/,200,Not Detection,Shopping,
+http://www.cambuy.com.au/,200,Not Detection,Shopping,
+http://www.sheike.com.au/,200,Not Detection,Shopping,
+http://www.kloud.com.au/,200,Not Detection,Business,
+http://www.freshforkids.com.au/,200,Not Detection,Health and Wellness,
+http://www.skinnymixers.com.au/,200,Not Detection,Restaurant and Dining,
+http://www.goodness.com.au/,200,Not Detection,Business,
+http://www.mishkah.com.au/,200,Not Detection,Shopping,
+http://www.laura-ashley.com.au/,200,Not Detection,Business,
+http://www.windsorsmith.com.au/,200,Not Detection,Shopping,
+http://www.dixonsmith.com.au/,200,Not Detection,Shopping,
+http://www.china.com.au/,200,Not Detection,Travel,
+http://www.clickonfurniture.com.au/,200,Not Detection,Shopping,
+http://www.shoutagency.com.au/,200,Not Detection,Business,
+http://www.theweeklyreview.com.au/,200,Not Detection,Society and Lifestyles,
+http://www.icedesign.com.au/,200,Not Detection,Business,
+http://www.markomedia.com.au/,200,Not Detection,Personal Websites and Blogs,
+http://www.kitepower.com.au/,200,Not Detection,Sports,
+http://www.ticketbooth.com.au/,200,Not Detection,Business,
+http://www.bikebiz.com.au/,200,Not Detection,Shopping,
+http://www.josephgeorge.com.au/,200,Not Detection,Business,
+http://www.localsmile.com.au/,200,Not Detection,News and Media,
+http://www.kikoff.com.au/,200,WordPress,Sports,False
+http://www.macworld.com.au/,200,WordPress,Information Technology,True
+http://www.pcaexpress.com.au/,200,Not Detection,Business,
+http://www.experian.com.au/,200,Not Detection,Finance and Banking,
+http://www.internetretailing.com.au/,200,Not Detection,Information Technology,
+http://www.jdlighting.com.au/,200,Not Detection,Shopping,
+http://www.hospitalitymagazine.com.au/,200,WordPress,News and Media,False
+http://www.socialmedianews.com.au/,200,WordPress,Personal Websites and Blogs,True
+http://www.starobserver.com.au/,200,WordPress,News and Media,True
+http://www.golights.com.au/,200,Magento,Shopping,
+http://www.theshovel.com.au/,200,Not Detection,News and Media,
+http://www.hypop.com.au/,200,Shopify,Shopping,
+http://www.profilebooster.com.au/,200,Not Detection,Information Technology,
+http://www.brightstarkids.com.au/,200,Magento,Shopping,
+http://www.earlysettler.com.au/,200,Magento,Business,
+http://www.etax.com.au/,200,WordPress,Finance and Banking,False
+http://www.quayaustralia.com.au/,200,Shopify,Shopping,
+http://www.blisterprevention.com.au/,200,Squarespace,Health and Wellness,
+http://www.bendonlingerie.com.au/,200,Magento,Lingerie and Swimsuit,
+http://www.my247.com.au/,200,WordPress,Entertainment,False
+http://www.undieguys.com.au/,200,WordPress,Shopping,False
+http://www.keepcalmgetorganised.com.au/,200,WordPress,Shopping,False
+http://www.enviropestcontrol.com.au/,200,Not Detection,Business,
+http://www.megantic.com.au/,200,WordPress,Information Technology,False
+http://www.nicks.com.au/,200,Magento,Alcohol,
+http://www.unsealed4x4.com.au/,200,WordPress,News and Media,True
+http://www.connor.com.au/,200,Magento,Travel,
+http://www.assignar.com.au/,200,Not Detection,Business,
+http://www.i-tech.com.au/,200,Magento,Information Technology,
+http://www.addrunner.com.au/,200,Not Detection,Business,
+http://www.cocomi.com.au/,200,Not Detection,Shopping,
+http://www.rogerdavid.com.au/,200,Magento,Shopping,
+http://www.hercanberra.com.au/,200,WordPress,Society and Lifestyles,False
+http://www.buymobile.com.au/,200,Shopify,Shopping,
+http://www.canstarblue.com.au/,200,WordPress,Society and Lifestyles,False
+http://www.drummondgolf.com.au/,200,Magento,Business,
+http://www.jasonl.com.au/,200,Shopify,Business,
+http://www.sussan.com.au/,200,Magento,Business,
+http://www.melbournegirl.com.au/,200,WordPress,Society and Lifestyles,False
+http://www.vividads.com.au/,200,Shopify,Business,
+http://www.mumsgrapevine.com.au/,200,WordPress,Shopping,False
+http://www.perthfestival.com.au/,200,WordPress,Entertainment,False
+http://www.thepartypeople.com.au/,200,Magento,Shopping,
+http://www.rexel.com.au/,200,WordPress,Business,False
+http://www.bloch.com.au/,200,PrestaShop,Business,
+http://www.ozdesignfurniture.com.au/,200,Magento,Shopping,
+http://www.swagcampertrailers.com.au/,200,WordPress,Personal Vehicles,False
+http://www.converse.com.au/,200,Magento,Shopping,
+http://www.cocorepublic.com.au/,200,Magento,Shopping,
+http://www.thehippocket.com.au/,200,WordPress,Business,False
+http://www.elitesupps.com.au/,200,Shopify,Health and Wellness,
+http://www.socialgarden.com.au/,200,WordPress,Business,False
+http://www.selby.com.au/,200,Magento,Shopping,
+http://www.bigwphotos.com.au/,200,Shopify,Entertainment,
+http://www.eglobaltravelmedia.com.au/,200,WordPress,Reference,True
+http://www.blankwall.com.au/,200,Magento,Business,
+http://www.inthemix.com.au/,200,Not Detection,Entertainment,
+http://www.nutritionwarehouse.com.au/,200,Magento,Health and Wellness,
+http://www.kresta.com.au/,200,WordPress,Business,False
+http://www.cebit.com.au/,200,WordPress,Business,False
+http://www.minkajoinery.com.au/,200,WordPress,Business,False
+http://www.supanova.com.au/,200,WordPress,Entertainment,False
+http://www.nickscali.com.au/,200,Magento,Business,
+http://www.orcinternational.com.au/,200,WordPress,Business,False
+http://www.steptwo.com.au/,200,WordPress,Business,False
+http://www.swimweargalore.com.au/,200,Magento,Lingerie and Swimsuit,
+http://www.artificialturfdirect.com.au/,200,WordPress,Real Estate,False
+http://www.coffeeclub.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.charterfishingsydney.com.au/,200,WordPress,Travel,False
+http://www.betking.com.au/,200,WordPress,Not Detection,False
+http://www.zodee.com.au/,200,Magento,Lingerie and Swimsuit,
+http://www.roxom.com.au/,200,WordPress,Business,False
+http://www.crackawines.com.au/,200,Shopify,Alcohol,
+http://www.cheesecake.com.au/,200,Magento,Restaurant and Dining,
+http://www.insideout.com.au/,200,WordPress,Business,True
+http://www.iamnatural.com.au/,200,WordPress,Advertising,False
+http://www.redrooster.com.au/,200,WordPress,Business,False
+http://www.xenlife.com.au/,200,WordPress,Business,False
+http://www.gymandfitness.com.au/,200,Shopify,Business,
+http://www.nbnnews.com.au/,200,WordPress,News and Media,False
+http://www.whitworths.com.au/,200,Magento,Personal Vehicles,
+http://www.esther.com.au/,200,Shopify,Shopping,
+http://www.fabness.com.au/,200,Magento,Shopping,
+http://www.learntotrade.com.au/,200,WordPress,Finance and Banking,False
+http://www.workingholidayjobs.com.au/,200,WordPress,Job Search,False
+http://www.taggle.com.au/,200,WordPress,Business,False
+http://www.ozzytyres.com.au/,200,Magento,Business,
+http://www.mjbseminars.com.au/,200,WordPress,Business,False
+http://www.harpercollins.com.au/,200,WordPress,Arts and Culture,False
+http://www.travelweekly.com.au/,200,WordPress,News and Media,True
+http://www.breakfastwithaudrey.com.au/,200,WordPress,Society and Lifestyles,True
+http://www.adultshop.com.au/,200,Magento,Other Adult Materials,
+http://www.robotbuildingsupplies.com.au/,200,WordPress,Business,False
+http://www.roxyaustralia.com.au/,200,Magento,Shopping,
+http://www.biggride.com.au/,200,Shopify,Shopping,
+http://www.swimart.com.au/,200,WordPress,Business,False
+http://www.dueltek.com.au/,200,Shopify,Business,
+http://www.carfinanceaustralia.com.au/,200,WordPress,Finance and Banking,False
+http://www.magicmillions.com.au/,200,WordPress,Business,False
+http://www.horseland.com.au/,200,Magento,Business,
+http://www.iresq.com.au/,200,WordPress,Business,False
+http://www.annacampbell.com.au/,200,Squarespace,Business,
+http://www.hamiltonsci.com.au/,200,WordPress,Business,False
+http://www.joujou.com.au/,200,Shopify,Pornography,
+http://www.crawfordrealty.com.au/,200,WordPress,Real Estate,False
+http://www.suzannegrae.com.au/,200,Magento,Business,
+http://www.f45training.com.au/,200,WordPress,Health and Wellness,False
+http://www.vapoureyes.com.au/,200,Shopify,Business,
+http://www.motackle.com.au/,200,Magento,Shopping,
+http://www.kevinmurphy.com.au/,200,WordPress,Business,False
+http://www.insidesmallbusiness.com.au/,200,WordPress,Business,False
+http://www.thefinancesite.com.au/,200,WordPress,Business,False
+http://www.nationaltiles.com.au/,200,Magento,Business,
+http://www.shoesandsox.com.au/,200,Magento,Shopping,
+http://www.cleaningcontractorsgeelong.com.au/,200,WordPress,Business,False
+http://www.costumes.com.au/,200,Magento,Shopping,
+http://www.yonanas.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.win-free-stuff.com.au/,200,WordPress,Games,False
+http://www.interiorsonline.com.au/,200,Shopify,Business,
+http://www.thenavigators.com.au/,200,Squarespace,Business,
+http://www.thejojobacompany.com.au/,200,Shopify,Society and Lifestyles,
+http://www.oporto.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.4mation.com.au/,200,WordPress,Information Technology,False
+http://www.techstyles.com.au/,200,WordPress,Personal Websites and Blogs,False
+http://www.linenhouse.com.au/,200,Not Detection,Shopping,
+http://www.cheapsheds.com.au/,200,Magento,Business,
+http://www.themandarin.com.au/,200,WordPress,News and Media,False
+http://www.fpmarkets.com.au/,200,Not Detection,Finance and Banking,
+http://www.ascolour.com.au/,200,Magento,Shopping,
+http://www.creditcard.com.au/,200,WordPress,Finance and Banking,False
+http://www.auswebdesign.com.au/,200,WordPress,Business,False
+http://www.randyfox.com.au/,200,Magento,Pornography,
+http://www.servermule.com.au/,200,WordPress,Information Technology,False
+http://www.identitydirect.com.au/,200,Magento,Shopping,
+http://www.shiels.com.au/,200,Magento,Business,
+http://www.filmink.com.au/,200,WordPress,Entertainment,False
+http://www.mobilephonerepairsydney.com.au/,200,WordPress,Business,False
+http://www.avace.com.au/,200,WordPress,Business,False
+http://www.tiptoeandco.com.au/,200,WordPress,Shopping,False
+http://www.thesourcebulkfoods.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.2ue.com.au/,200,Not Detection,News and Media,
+http://www.magnamail.com.au/,200,Magento,Shopping,
+http://www.qantasnewsroom.com.au/,200,WordPress,Travel,False
+http://www.quirkycooking.com.au/,200,WordPress,Restaurant and Dining,True
+http://www.livefish.com.au/,200,Magento,Shopping,
+http://www.baileynelson.com.au/,200,Shopify,Shopping,
+http://www.sparesbox.com.au/,200,Magento,Personal Vehicles,
+http://www.insidefmcg.com.au/,200,WordPress,News and Media,False
+http://www.weberbbq.com.au/,200,WordPress,Business,False
+http://www.latestbuy.com.au/,200,WordPress,Shopping,False
+http://www.forevershining.com.au/,200,WordPress,Business,False
+http://www.simplywholesale.com.au/,200,Shopify,Shopping,
+http://www.manmonthly.com.au/,200,WordPress,Business,False
+http://www.jobadvisor.com.au/,200,WordPress,Job Search,False
+http://www.scouts.com.au/,200,WordPress,General Organizations,False
+http://www.swingers.com.au/,200,WordPress,Pornography,False
+http://www.onproperty.com.au/,200,WordPress,Real Estate,False
+http://www.gourmetgetaways.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.runnersworldonline.com.au/,200,WordPress,Sports,False
+http://www.wavenetwork.com.au/,200,WordPress,Education,False
+http://www.myhouse.com.au/,200,Shopify,Business,
+http://www.thebeachpeople.com.au/,200,Shopify,Arts and Culture,
+http://www.stylearc.com.au/,200,Not Detection,Shopping,
+http://www.trtlmt.com.au/,200,WordPress,Business,False
+http://www.aussiesoapsupplies.com.au/,200,Magento,Shopping,
+http://www.casebuddy.com.au/,200,Shopify,Information Technology,
+http://www.renovatorstore.com.au/,200,Magento,Business,
+http://www.web123.com.au/,200,WordPress,Business,False
+http://www.localspot.com.au/,200,WordPress,Business,False
+http://www.citroen.com.au/,200,WordPress,Personal Vehicles,False
+http://www.crowaway.com.au/,200,WordPress,Reference,False
+http://www.mrtperformance.com.au/,200,Magento,Sports,
+http://www.bannerbuzz.com.au/,200,Magento,Shopping,
+http://www.fatzebra.com.au/,200,Squarespace,Finance and Banking,
+http://www.oneteaspoon.com.au/,200,Magento,Entertainment,
+http://www.theshout.com.au/,200,WordPress,Business,False
+http://www.aussiecommerce.com.au/,200,Not Detection,Information Technology,
+http://www.thornbroadband.com.au/,200,Not Detection,Information Technology,
+http://www.shonajoy.com.au/,200,Shopify,Shopping,
+http://www.shearersonline.com.au/,200,WordPress,Business,False
+http://www.mocka.com.au/,200,Magento,Business,
+http://www.edisons.com.au/,200,Magento,Business,
+http://www.totallyworkwear.com.au/,200,Magento,Business,
+http://www.addictedtoaudio.com.au/,200,Shopify,Shopping,
+http://www.gasweld.com.au/,200,Magento,Business,
+http://www.harveynormanphotos.com.au/,200,Shopify,Entertainment,
+http://www.seopoint.com.au/,200,WordPress,Information Technology,False
+http://www.radiallife.com.au/,200,Shopify,Shopping,
+http://www.mychameleon.com.au/,200,Magento,Shopping,
+http://www.cyclesgalleria.com.au/,200,Shopify,Personal Vehicles,
+http://www.inkable.com.au/,200,WordPress,Not Detection,False
+http://www.isabellaspassion.com.au/,200,Magento,Lingerie and Swimsuit,
+http://www.communitynews.com.au/,200,WordPress,News and Media,True
+http://www.purplesneakers.com.au/,200,WordPress,Entertainment,False
+http://www.canberraairport.com.au/,200,WordPress,Travel,False
+http://www.outdoorlivingdirect.com.au/,200,Magento,Business,
+http://www.migrationtranslators.com.au/,200,WordPress,Business,False
+http://www.krispykreme.com.au/,200,Magento,Restaurant and Dining,
+http://www.aristocrat.com.au/,200,Not Detection,Business,
+http://www.bulletproof.net.au/,200,WordPress,Business,False
+http://www.allbuzzdomesticservices.com.au/,200,WordPress,Business,False
+http://www.insiderguides.com.au/,200,WordPress,Education,True
+http://www.doorsteporganics.com.au/,200,OpenCart,Restaurant and Dining,
+http://www.superiorpeople.com.au/,200,WordPress,Job Search,False
+http://www.autoexpert.com.au/,200,Squarespace,Personal Vehicles,
+http://www.bikenuttransport.com.au/,200,WordPress,Personal Vehicles,False
+http://www.afterpay.com.au/,200,Not Detection,Business,
+http://www.syncmarketing.com.au/,200,Squarespace,Business,
+http://www.aussiedisposals.com.au/,200,Magento,Business,
+http://www.evans.com.au/,200,WordPress,Business,False
+http://www.westernpergolasndecking.com.au/,200,WordPress,Business,False
+http://www.indiaathome.com.au/,200,Magento,Restaurant and Dining,
+http://www.mutualtrust.com.au/,200,WordPress,Finance and Banking,False
+http://www.radio-rentals.com.au/,200,Magento,Business,
+http://www.aopi.com.au/,200,WordPress,Education,False
+http://www.sellbuyswap.com.au/,200,WordPress,Shopping,True
+http://www.dolmanbateman.com.au/,200,WordPress,Business,False
+http://www.pergolarific.com.au/,200,WordPress,Business,False
+http://www.bizcover.com.au/,200,WordPress,Finance and Banking,False
+http://www.trendnet.com.au/,200,Shopify,Information Technology,
+http://www.bonfire.com.au/,200,WordPress,Information Technology,False
+http://www.glamcorner.com.au/,200,Magento,Shopping,
+http://www.thebongshop.com.au/,200,Shopify,Shopping,
+http://www.elementsofbyron.com.au/,200,WordPress,Travel,False
+http://www.broadband.com.au/,200,WordPress,Information Technology,False
+http://www.nationalcoding.com.au/,200,WordPress,Business,False
+http://www.retailexpress.com.au/,200,WordPress,Business,False
+http://www.coursefinder.com.au/,200,WordPress,Education,False
+http://www.autopartsgroup.com.au/,200,WordPress,Personal Vehicles,False
+http://www.coghlanroofing.com.au/,200,WordPress,Business,False
+http://www.mymarketingperson.com.au/,200,Squarespace,Newly Observed Domain,
+http://www.christianpaul.com.au/,200,WordPress,Shopping,False
+http://www.justbarstools.com.au/,200,Shopify,Shopping,
+http://www.todaysplan.com.au/,200,WordPress,Sports,False
+http://www.nurseriesonline.com.au/,200,WordPress,Society and Lifestyles,False
+http://www.dollcake.com.au/,200,Shopify,Shopping,
+http://www.smilesolutions.com.au/,200,WordPress,Health and Wellness,False
+http://www.purebaby.com.au/,200,Magento,Shopping,
+http://www.freshflowers.com.au/,200,Magento,Shopping,
+http://www.dusk.com.au/,200,Magento,Shopping,
+http://www.professionalplanner.com.au/,200,WordPress,Finance and Banking,True
+http://www.perricutten.com.au/,200,WordPress,Not Detection,False
+http://www.brighterwhite.com.au/,200,Shopify,Shopping,
+http://www.wantedshoes.com.au/,200,Magento,Shopping,
+http://www.onehandedcooks.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.beautyatbell.com.au/,200,WordPress,Business,False
+http://www.arkit.com.au/,200,Squarespace,Shopping,
+http://www.lwdaccounting.com.au/,200,WordPress,Newly Observed Domain,False
+http://www.mmem.com.au/,200,Magento,Business,
+http://www.aliveskinhair.com.au/,200,Magento,Shopping,
+http://www.haighschocolates.com.au/,200,Magento,Restaurant and Dining,
+http://www.1800cleaning.com.au/,200,WordPress,Information Technology,False
+http://www.spendless.com.au/,200,Magento,Shopping,
+http://www.a2media.com.au/,200,WordPress,Business,False
+http://www.kooyongclassic.com.au/,200,WordPress,Not Detection,False
+http://www.sundaysomewhere.com.au/,200,Shopify,Shopping,
+http://www.larsenjewellery.com.au/,200,WordPress,Not Detection,False
+http://www.optimoz.com.au/,200,Shopify,Shopping,
+http://www.rhythmsnowsports.com.au/,200,Magento,Sports,
+http://www.golfshore.com.au/,200,WordPress,Real Estate,False
+http://www.gumtreforbusinesses.com.au/,200,Not Detection,Business,
+http://www.nirmal.com.au/,200,WordPress,Information Technology,False
+http://www.micropower.com.au/,200,Not Detection,Information Technology,
+http://www.alltel.com.au/,200,WordPress,Information Technology,False
+http://www.pilgrimclothing.com.au/,200,Shopify,Shopping,
+http://www.ratspestcontrolperth.com.au/,200,WordPress,Business,False
+http://www.nudebynature.com.au/,200,Shopify,Health and Wellness,
+http://www.pestcontrolwa.com.au/,200,WordPress,Business,False
+http://www.brennanit.com.au/,200,WordPress,Information Technology,False
+http://www.metrotas.com.au/,200,WordPress,Government and Legal Organizations,False
+http://www.rottnestexpress.com.au/,200,Magento,Business,
+http://www.strategenics.com.au/,200,WordPress,Not Detection,False
+http://www.quay.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.yoursocialvoice.com.au/,200,WordPress,Business,False
+http://www.swannstore.com.au/,200,Not Detection,Information Technology,
+http://www.freedomcurtainsandblinds.com.au/,200,Magento,Shopping,
+http://www.nationalstorage.com.au/,200,WordPress,Business,False
+http://www.whitebohemian.com.au/,200,Shopify,Shopping,
+http://www.fontis.com.au/,200,Magento,Information Technology,
+http://www.petrel-kitchen.com.au/,200,WordPress,Business,False
+http://www.sprinklesandsprouts.com.au/,200,Not Detection,Restaurant and Dining,
+http://www.seofix.com.au/,200,WordPress,Information Technology,False
+http://www.peterstevens.com.au/,200,Magento,Business,
+http://www.rinnai.com.au/,200,WordPress,Business,False
+http://www.musclemealsdirect.com.au/,200,Magento,Health and Wellness,
+http://www.anyware.com.au/,200,Magento,Not Detection,
+http://www.jsdev.com.au/,200,WordPress,Not Rated,False
+http://www.melbournewatch.com.au/,200,Shopify,Shopping,
+http://www.primped.com.au/,200,Not Detection,Entertainment,
+http://www.forcast.com.au/,200,Magento,Shopping,
+http://www.51ustudy.com.au/,200,WordPress,Education,False
+http://www.kitchendesignvictoria.com.au/,200,Not Detection,Business,
+http://www.sportspower.com.au/,200,Not Detection,Sports,
+http://www.psych-it.com.au/,200,Not Detection,Health and Wellness,
+http://www.treloarroses.com.au/,200,Not Detection,Shopping,
+http://www.justdigitalpeople.com.au/,200,WordPress,Information Technology,False
+http://www.august.com.au/,200,Not Detection,Business,
+http://www.priorityguestrewards.com.au/,200,Not Detection,Travel,
+http://www.pendo.com.au/,200,Not Detection,Information Technology,
+http://www.tigerlilyswimwear.com.au/,200,Not Detection,Lingerie and Swimsuit,
+http://www.australiawideannexes.com.au/,200,Not Detection,Business,
+http://www.capitalfacilityservices.com.au/,200,Not Detection,Business,
+http://www.liberty-flights.com.au/,200,Not Detection,Tobacco,
+http://www.hiddencitysecrets.com.au/,200,Not Detection,Not Detection,
+http://www.smartseo.com.au/,200,Not Detection,Information Technology,
+http://www.wearesocial.com.au/,200,Not Detection,News and Media,
+http://www.floralpalace.com.au/,200,OpenCart,Business,
+http://www.freedatingaustralia.com.au/,200,WordPress,Dating,False
+http://www.businessnet.com.au/,200,WordPress,Business,False
+http://www.wisdomteethdentist.com.au/,200,WordPress,Health and Wellness,False
+http://www.bioglan.com.au/,200,Not Detection,Not Detection,
+http://www.itguyswa.com.au/,200,WordPress,Information Technology,False
+http://www.huntingdaledc.com.au/,200,WordPress,Health and Wellness,False
+http://www.jayco.com.au/,200,WordPress,Business,False
+http://www.shine.com.au/,200,WordPress,Government and Legal Organizations,False
+http://www.limelightmagazine.com.au/,200,WordPress,Entertainment,True
+http://www.masteringcgi.com.au/,200,WordPress,Arts and Culture,False
+http://www.dropshipzone.com.au/,200,Not Detection,Not Detection,
+http://www.infosalons.com.au/,200,WordPress,Business,False
+http://www.margotrobbie.com.au/,200,WordPress,Business,False
+http://www.homehound.com.au/,200,WordPress,Real Estate,True
+http://www.fivesenses.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.wanderluststorytellers.com.au/,200,Not Detection,Pornography,
+http://www.solarmarket.com.au/,200,WordPress,Business,False
+http://www.ecooutdoor.com.au/,200,WordPress,Business,False
+http://www.queensland-seo.com.au/,200,WordPress,Information Technology,False
+http://www.cockroachespestcontrolperth.com.au/,200,WordPress,Newly Observed Domain,False
+http://www.kingkong.com.au/,200,WordPress,Information Technology,False
+http://www.dailygreatness.com.au/,200,Shopify,Shopping,
+http://www.saison.com.au/,200,Magento,Shopping,
+http://www.smscentral.com.au/,200,WordPress,Information Technology,False
+http://www.hisense.com.au/,200,WordPress,Business,False
+http://www.lipstikshoes.com.au/,200,Magento,Shopping,
+http://www.bronto.com.au/,200,Not Detection,Information Technology,
+http://www.danozdirect.com.au/,200,WordPress,Not Detection,False
+http://www.rogerseller.com.au/,200,Magento,Business,
+http://www.speedcube.com.au/,200,Shopify,Shopping,
+http://www.digbargain.com.au/,200,WordPress,Shopping,False
+http://www.essentialbeauty.com.au/,200,WordPress,Business,False
+http://www.bestwestern.com.au/,200,WordPress,Travel,False
+http://www.cubicpromote.com.au/,200,Magento,Shopping,
+http://www.aflplayers.com.au/,200,WordPress,Sports,False
+http://www.balloonagencies.com.au/,200,Magento,Entertainment,
+http://www.businessblueprint.com.au/,200,WordPress,Business,False
+http://www.soufeel.com.au/,200,Magento,Shopping,
+http://www.champ-sys.com.au/,200,Shopify,Sports,
+http://www.harveynormancommercial.com.au/,200,Magento,Business,
+http://www.burson.com.au/,200,WordPress,Personal Vehicles,False
+http://www.evatech.com.au/,200,PrestaShop,Information Technology,
+http://www.nicholasonline.com.au/,200,Shopify,Shopping,
+http://www.tinypeople.com.au/,200,Shopify,Shopping,
+http://www.rugstar.com.au/,200,Shopify,Shopping,
+http://www.sureshade.com.au/,200,WordPress,Business,False
+http://www.flatnakka.com.au/,200,WordPress,Freeware and Software Downloads,False
+http://www.viviensmodels.com.au/,200,WordPress,Entertainment,False
+http://www.organicsonabudget.com.au/,200,Shopify,Restaurant and Dining,
+http://www.fitnfast.com.au/,200,WordPress,Health and Wellness,False
+http://www.elfcosmetics.com.au/,200,Shopify,Shopping,
+http://www.clubarham.com.au/,200,WordPress,Travel,False
+http://www.sofrenchysochic.com.au/,200,WordPress,Arts and Culture,False
+http://www.ryda.com.au/,200,Magento,Shopping,
+http://www.sakerestaurant.com.au/,200,WordPress,Restaurant and Dining,False
+http://www.decjuba.com.au/,200,Shopify,Shopping,
+http://www.merrellaustralia.com.au/,200,Magento,Shopping,
+http://www.aurahome.com.au/,200,Magento,Business,
+http://www.talent-100.com.au/,200,WordPress,Education,False
+http://www.thegrounds.com.au/,200,WordPress,Business,False
+http://www.southeastair.com.au/,200,WordPress,Business,False
+http://www.designerforum.com.au/,200,Magento,Shopping,
+http://www.inmarketingwetrust.com.au/,200,WordPress,Business,False
+http://www.thebabyshowershop.com.au/,200,WordPress,Shopping,False
+http://www.grace.com.au/,200,WordPress,Business,False
+http://www.castleford.com.au/,200,WordPress,Business,False
+http://www.exa.com.au/,200,Not Detection,Information Technology,
+http://www.wish.com.au/,200,Shopify,Society and Lifestyles,
+http://www.flowservices.com.au/,200,WordPress,Business,False
+http://www.thebower.com.au/,200,WordPress,Business,False
+http://www.missesbonneystives.com.au/,200,PrestaShop,Shopping,
+http://www.countrymusicchannel.com.au/,200,WordPress,Entertainment,False

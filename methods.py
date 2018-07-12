@@ -36,7 +36,7 @@ def get_result(url, proxy_list):
         # Get the status code
         s = requests.Session()
         s.keep_alive = False
-        r = s.get(url, headers=headers, timeout=10)
+        r = s.get(url, headers=headers, timeout=20)
         status_code = r.status_code
         soup = BeautifulSoup(r.text, 'lxml')
         s.close()
