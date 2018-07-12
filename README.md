@@ -1,4 +1,4 @@
-# Website-CMS-Detection
+# URL Analysis Tool
 
 This Python script is used to detected the website's CMS and Status code. It mainly focus on Opencart, Prestashop, Wordpress, Magento, Shopify and Squarespace. It sends requests to website "https://whatcms.org/" and extracts the detection result from the website. To speed up the detection, a multiple processors method is used.
 
@@ -30,4 +30,7 @@ mpiexec --allow-run-as-root -n 20 python3 Main.py -f input.txt
 ## License
 
 This project is licensed under the MIT License
+
+## Demo
+<img width="544" alt="image 1" src="https://user-images.githubusercontent.com/22671087/42612132-e32118aa-85dc-11e8-8c68-e9798ad915f6.PNG">
 
