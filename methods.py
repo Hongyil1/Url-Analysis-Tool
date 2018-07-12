@@ -26,33 +26,26 @@ def get_result(url, proxy_list):
     :return: No return, write the result to the file
     """
 
+    # remove the '\n' in the end of url
     if url.endswith('\n'):
         url = url.strip('\n')
     origin_url = url
 
     headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
-
-
     try:
         # Get the status code
         s = requests.Session()
         s.keep_alive = False
-
-        r = s.get(url, headers=headers, timeout=30)
+        r = s.get(url, headers=headers, timeout=10)
         status_code = r.status_code
         soup = BeautifulSoup(r.text, 'lxml')
         s.close()
 
-        # print("status_code: ", status_code)
-
         if status_code == 200:
-
             # Pre-process the url
             url = pre_process(url)
-
             # Get CMS
-            url_cms = cms_detct(url)
-
+            url_cms = cms_detct(url, proxy_list)
             # Get category
             url_category = get_category(url, proxy_list)
             advertise = ""
@@ -60,7 +53,6 @@ def get_result(url, proxy_list):
             if url_cms == "WordPress":
                 # Advertise detection
                 advertise = has_advertise(soup)
-
             print(origin_url, status_code, url_cms, url_category, advertise, flush=True)
             write_target(origin_url, status_code, url_cms, url_category, advertise)
 
@@ -75,7 +67,7 @@ def get_result(url, proxy_list):
         print(str(e))
         pass
 
-def cms_detct(url):
+def cms_detct(url, proxy_list):
     """
     This method detect the cms of the url
     :param url: the pre-process url, a String. example: www.shore-lines.co.uk
@@ -91,14 +83,33 @@ def cms_detct(url):
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
     s = requests.Session()
     s.keep_alive = False
+
+    try:
+        r = s.get(search_url, headers=headers)
+    except:
+        # Use loop to solve the connection problem
+        r = ''
+        count = 0
+        while r == '':
+            if count == 5:
+                print("Really bad url, can't work.....")
+                return "Not Detection"
+            else:
+                try:
+                    proxy = random.choice(proxy_list)
+                    r = s.get(search_url, headers=headers, proxies={"http": proxy, "https": proxy})
+                    break
+                except:
+                    print("Connection refused by the server, change proxy.")
+                    count += 1
+                    continue
+
     r = s.get(search_url, headers=headers)
     soup = BeautifulSoup(r.text, 'lxml')
     s.close()
 
     # Get the pure text
     web_text = soup.get_text()
-    # print(web_text)
-
     detect_text = "We haven't crawled"
 
     # The url has not been detected before, use selenium to click the button
@@ -141,7 +152,7 @@ def cms_detct(url):
         elif "Squarespace" in elem_list:
             return "Squarespace"
         else:
-            return "Not Detect"
+            return "Not Detection"
 
     # The url has been detected before
     else:
@@ -163,9 +174,9 @@ def cms_detct(url):
             elif "Squarespace" == result:
                 return "Squarespace"
             else:
-                return "Not Detect"
+                return "Not Detection"
         else:
-            return "Not Detect"
+            return "Not Detection"
 
 def get_category(url, proxy_list):
     """
@@ -193,7 +204,6 @@ def get_category(url, proxy_list):
         else:
             try:
                 proxy = random.choice(proxy_list)
-                # print('proxy:', proxy)
                 r = s.get(search_url, headers=headers, proxies={"http": proxy, "https": proxy})
                 break
             except:
@@ -283,7 +293,7 @@ def write_problem(url, status_code):
         writer.writerow({'url': url, 'status_code': status_code, 'CMS': "",
                          'category': "", 'advertise': ""})
 
-def get_proxy_list():
+def get_proxy_list(old_proxy_list):
     """
     This function scrapes free proxy from https://free-proxy-list.net/
     :return: A list of proxy, length is 30. e.g. ['36.67.227.195:8080', '74.116.59.8:53281']
@@ -292,12 +302,25 @@ def get_proxy_list():
     headers = {
         'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'}
     s = requests.Session()
-    r = s.get(url, headers=headers)
+
+    try:
+        r = s.get(url, headers=headers)
+    except:
+        # Use loop to solve the connection problem
+        r = ''
+        while r == '':
+            try:
+                proxy = random.choice(old_proxy_list)
+                r = s.get(url, headers=headers, proxies={"http": proxy, "https": proxy})
+                break
+            except:
+                print("Connection refused by the server, change proxy.")
+                continue
+
     soup = BeautifulSoup(r.text, "lxml")
     s.close()
 
     proxy_list = []
-
     tag_tbody = soup.find("tbody")
     tag_trs = tag_tbody.find_all("tr")
     for tr in tag_trs:
@@ -308,3 +331,4 @@ def get_proxy_list():
     # leave the first 30 proxy
     proxy_list = proxy_list[:30]
     return proxy_list
+

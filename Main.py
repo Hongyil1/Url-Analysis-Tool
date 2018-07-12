@@ -46,7 +46,8 @@ if __name__=="__main__":
 
     # Spread the proxy list to other rank
     if rank == 0:
-        proxy_list = methods.get_proxy_list()
+        proxy_list = ['62.176.114.233:8080', '177.75.95.65:53281']
+        proxy_list = methods.get_proxy_list(proxy_list)
     else:
         proxy_list = None
     proxy_list = comm.bcast(proxy_list, root=0)
@@ -60,7 +61,7 @@ if __name__=="__main__":
                     if len(line) > 0:
                         # Renew the proxy_list each 100 loops
                         if count == 100:
-                            proxy_list = methods.get_proxy_list()
+                            proxy_list = methods.get_proxy_list(proxy_list)
                             count = 0
                             print("rank{0} renews the proxy list.....".format(rank))
                         else:
@@ -91,7 +92,7 @@ if __name__=="__main__":
                         if len(line) > 0:
                             # Renew the proxy_list each 100 loops
                             if count == 100:
-                                proxy_list = methods.get_proxy_list()
+                                proxy_list = methods.get_proxy_list(proxy_list)
                                 count = 0
                                 print("rank{0} renews the proxy list.....".format(rank))
                             else:
