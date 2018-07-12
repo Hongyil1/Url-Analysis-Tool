@@ -2,7 +2,8 @@
 
 This Python project is used to analyse a great number of urls. It achieves the following functions:
 - Detect the status code of the url.
-- Detect the Content Management System (CMS) of the url. Mainly focus on Opencart, Prestashop, Wordpress, Magento, Shopify and Squarespace.
+- Detect the Content Management System (CMS) of the url. 
+Mainly focus on Opencart, Prestashop, Wordpress, Magento, Shopify and Squarespace.
 - Classify the url according to the website content.
 - Detect whether a user can advertise in the website (Wordpress only).
 
