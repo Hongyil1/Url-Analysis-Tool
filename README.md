@@ -37,7 +37,9 @@ mpiexec --allow-run-as-root -n 20 python3 Main.py -f input.txt
 ```
 ## Authors
 
-* **[Hongyi Lin](https://github.com/Hongyil1)** 
+* **[Hongyi Lin](https://github.com/Hongyil1)**
+
+Project created while at [Weboptimizers](https://www.weboptimizers.com.au/)
 
 ## License
 
